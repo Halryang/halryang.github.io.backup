@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    <title>Markdown TOC Generator :: 한량의 Jekyll 블로그</title>
+
+    <meta name="author" content="한량의 Jekyll 블로그" />
+    <meta name="description" content="안녕하세요. CLI를 모르는 한량이 만든 Jekyll 블로그에 오셨습니다.">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="한량의 Jekyll 블로그 - 안녕하세요. CLI를 모르는 한량이 만든 Jekyll 블로그에 오셨습니다." href="/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png" /></a>
+          
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">한량의 Jekyll 블로그</a></h1>
+            <p class="site-description">안녕하세요. CLI를 모르는 한량이 만든 Jekyll 블로그에 오셨습니다.</p>
+          </div>
+          
+          <nav>
+            <a href="/">Blog</a>
+            <a href="/about">About</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>Markdown TOC Generator</h1>
+
+  <div class="entry">
+    <ol>
+<li>들어가며</li>
+<li>Markdown TOC Generator
+
+<ol>
+<li>장점</li>
+<li>단점</li>
+<li>필요사항</li>
+<li>사용법</li>
+</ol></li>
+<li>맺음말</li>
+</ol>
+
+<hr>
+
+<h2>들어가며</h2>
+
+<p>마크다운 문서의 목차를 만드는 것에 관심이 생기고 검색하다가 도움을 받고자 ADN에 <a href="https://alpha.app.net/charmjf/post/41954644">질문</a>을 올렸다. 친절하게도, ADN에서 내가 팔로우하고 있는 <a href="https://alpha.app.net/jmjeong">jmjeong</a>님께서 마크다운 문서의 목차를 만드는 프로그램을 만들어서 배포하셨다. 터미널 명령어도 전혀 모르고 기본적인 프로그래밍 개념도 없는 내가 질문을 많이 했는데도 친절하게 설명해주셨다. 프로그램이 작동하는 원리는 모르지만, 나처럼 프로그래밍을 모르는 사람도 유용하게 사용하면 좋겠다는 생각이 들어 소개 글을 작성한다.</p>
+
+<h2>Markdown TOC Generator</h2>
+
+<h3>장점</h3>
+
+<ul>
+<li><strong>특정 앱이 필요 없음</strong>: toc.py 파일 하나만 내려받으면 사용할 수 있다.</li>
+<li><strong>Depth 지정 옵션</strong>: 목차에 포함할 Heading의 Depth를 지정할 수 있다.</li>
+<li><strong>목차 형태 지정 옵션</strong>: 목차의 항목에 말머리 형태를 다양한 조합으로 선택할 수 있다.</li>
+<li><strong>들여쓰기 지정 옵션</strong>: 목차의 하위 항목에 들여쓰기(Indent)를 얼마나 할지 설정할 수 있다.</li>
+<li><strong>결과물을 터미널에서 바로 확인 가능</strong>: 생성된 목차를 바로 확인할 수 있다.</li>
+<li><strong>클립보드에 복사 옵션</strong>: 목차를 만들고 클립보드에 저장까지 한 번에 할 수 있다.</li>
+</ul>
+
+<h3>단점</h3>
+
+<ul>
+<li>커맨드 라인 인터페이스(Command-line interface, CLI)에 익숙하지 않은 사람에게는 생소할 수 있다.</li>
+</ul>
+
+<h3>필요사항</h3>
+
+<ul>
+<li>Mac</li>
+<li>toc.py 파일[<sup>1]</sup> &gt;&gt; <a href="https://gist.github.com/jmjeong/e901993bb8924ecd8b1b" title="markdown toc generator">다운로드</a></li>
+</ul>
+
+<h3>사용법</h3>
+
+<p>예를 들어 순서대로 설명하겠다. &quot;~/User/Username/Notes&quot;라는 폴더에 &quot;mtest.md&quot;라는 마크다운 문서가 있는 경우 &quot;mtest.md&quot; 문서의 목차를 생성하는 상황을 가정한다.</p>
+
+<ol>
+<li>toc.py 파일을 내려받는다.</li>
+<li>내려받은 toc.py 파일을 &quot;~/User/Username/Notes&quot; 폴더에 넣는다.</li>
+<li>터미널을 실행하여 <code>cd Notes</code> 명령어를 입력한다.
+
+<ul>
+<li>toc.py 파일과 마크다운 문서가 위치한 폴더로 이동하는 것이다.</li>
+</ul></li>
+<li><code>python toc.py mtest.md</code> 명령어를 입력한다.
+
+<ul>
+<li>이 명령어가 toc.py 파일을 통해 원하는 문서의 목차를 생성한다.</li>
+</ul></li>
+</ol>
+
+<p>위의 순서대로 진행하면 터미널 화면에 생성된 목차가 초기 설정 값대로 출력된다. 옵션으로 설정 값을 변경할 수 있으며 초기 설정 값은 다음과 같다.</p>
+
+<ul>
+<li><strong>Depth(옵션 -d) = 2</strong>: <code>##</code>로 입력한 Heading 2부터 하위 Heading을 목차의 항목으로 가져온다. <code>python toc.py -d 3 mtest.md</code>라고 명령하면 <code>###</code>로 입력한 Heading 3부터 하위 Heading을 목차의 항목으로 가져온다.</li>
+<li><strong>들여쓰기(옵션 -i)</strong> = 4: 항목이 하위 레벨로 내려갈수록 스페이스 4번의 공백으로 들여쓰기가 된다. <code>python toc.py -i 2 mtest.md</code>라고 입력하면 스페이스 2번의 공백으로 들여쓰기가 된다.</li>
+<li><strong>클립보드로 복사(옵션 -c)</strong>: 기본적으로는 클립보드로 복사하지 않고 터미널 화면에만 목차를 출력한다. <code>python toc.py -c mtest.md</code>라고 명령하면 생성된 목차를 클립보드로 복사한다.</li>
+<li><strong>말머리 기호(옵션 -f) = DD</strong>: Heading 2,3은 숫자&quot;1. &quot;로, 그보다 하위 항목의 말머리 기호는 순서 없는 목록을 사용할 때 쓰이는 &quot;* &quot;가 기본으로 설정되어 있다. 선택할 수 있는 말머리 기호 옵션에는 &quot;D:1., d:1.1., *:*, a:a., A:A., H:가. , h:ㄱ.&quot; 이 있다. 각 옵션별 설정 값의 조합에 따라 다양한 형태의 목차를 얻을 수 있다.</li>
+</ul>
+
+<h2>맺음말</h2>
+
+<p>초기 버전에서는 설정할 수 있는 옵션이 적어서 내가 원하는 형태로 목차가 생성되지 않았다. 그래서 Keyboard Maestro Macro로 목차를 만들어서 삽입했는데, 지금 버전은 충분히 내가 원하는 형태의 목차를 만들 수 있다.</p>
+
+<p>나는 다른 옵션은 초기 설정값이 딱 원하는 결과물이어서 목차를 바로 클립보드로 저장하는 옵션만 추가하여 사용한다. 마크다운 문서를 열어 원하는 위치에 붙여넣으면 된다. 나는 글과 목차를 구분하기 원해서 위아래로 구분선을 넣는다. 이렇게 하면 내가 원하는 목차를 마크다운 문서에 넣을 수 있다.</p>
+
+<p>좋은 프로그램을 만들어 주신 <a href="https://alpha.app.net/jmjeong">jmjeong</a>님께 감사하다는 말로 이번 글을 마무리한다. 정말 고맙습니다. :)</p>
+
+<p>[<sup>1]:</sup> 이 글을 처음 작성하는 현재 1.5 버전이다. 페이지 오른쪽에 구름 모양 아이콘과 함께 &quot;Download Gist&quot;라고 적혀 있는 버튼을 눌러서 내려받을 수 있다. 압축을 해제하면 복잡한 이름의 폴더 안에 toc.py 파일이 있다.</p>
+
+  </div>
+
+  <div class="date">
+    <br>  
+    이 글은 2014-10-30에 작성되었습니다.
+  </div>
+
+</article>
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+                    
+          <a href="mailto:charmjf@gmail.com"><svg width="40px" height="40px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <path d="M0.224580688,30 C0.224580688,13.4314567 13.454941,0 29.7754193,0 C46.0958976,0 59.3262579,13.4314567 59.3262579,30 C59.3262579,46.5685433 46.0958976,60 29.7754193,60 C13.454941,60 0.224580688,46.5685433 0.224580688,30 Z M0.224580688,30" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+    <path d="M35.0384324,31.6384006 L47.2131148,40.5764264 L47.2131148,20 L35.0384324,31.6384006 Z M13.7704918,20 L13.7704918,40.5764264 L25.9449129,31.6371491 L13.7704918,20 Z M30.4918033,35.9844891 L27.5851037,33.2065217 L13.7704918,42 L47.2131148,42 L33.3981762,33.2065217 L30.4918033,35.9844891 Z M46.2098361,20 L14.7737705,20 L30.4918033,32.4549304 L46.2098361,20 Z M46.2098361,20" id="Shape" fill="#333333" sketch:type="MSShapeGroup"></path>
+    <path d="M59.3262579,30 C59.3262579,46.5685433 46.0958976,60 29.7754193,60 C23.7225405,60 18.0947051,58.1525134 13.4093244,54.9827754 L47.2695458,5.81941103 C54.5814438,11.2806503 59.3262579,20.0777973 59.3262579,30 Z M59.3262579,30" id="reflec" fill-opacity="0.08" fill="#000000" sketch:type="MSShapeGroup"></path>
+</svg></a>
+          
+          
+          
+          
+          
+          
+          
+          <a href="http://twitter.com/charmjf"><svg width="40px" height="40px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <path d="M0,30 C0,13.4314567 13.4508663,0 30.0433526,0 C46.6358389,0 60.0867052,13.4314567 60.0867052,30 C60.0867052,46.5685433 46.6358389,60 30.0433526,60 C13.4508663,60 0,46.5685433 0,30 Z M0,30" fill="#4099FF" sketch:type="MSShapeGroup"></path>
+    <path d="M29.2997675,23.8879776 L29.3627206,24.9260453 L28.3135016,24.798935 C24.4943445,24.3116787 21.1578281,22.6592444 18.3249368,19.8840023 L16.9399677,18.5069737 L16.5832333,19.5238563 C15.8277956,21.7906572 16.3104363,24.1845684 17.8842648,25.7946325 C18.72364,26.6844048 18.5347806,26.8115152 17.0868584,26.2818888 C16.5832333,26.1124083 16.1425613,25.985298 16.1005925,26.0488532 C15.9537019,26.1971486 16.457327,28.1249885 16.8560302,28.8876505 C17.4016241,29.9469033 18.5137962,30.9849709 19.7308902,31.5993375 L20.7591248,32.0865938 L19.5420308,32.1077788 C18.3669055,32.1077788 18.3249368,32.1289639 18.4508431,32.57385 C18.8705307,33.9508786 20.5282967,35.4126474 22.3749221,36.048199 L23.6759536,36.4930852 L22.5427971,37.1710069 C20.8640467,38.1455194 18.891515,38.6963309 16.9189833,38.738701 C15.9746862,38.759886 15.1982642,38.8446262 15.1982642,38.9081814 C15.1982642,39.1200319 17.7583585,40.306395 19.2482495,40.7724662 C23.7179224,42.1494948 29.0269705,41.5563132 33.0140027,39.2047722 C35.846894,37.5311528 38.6797853,34.2050993 40.0018012,30.9849709 C40.7152701,29.2689815 41.428739,26.1335934 41.428739,24.6294545 C41.428739,23.654942 41.4916922,23.5278317 42.6668174,22.3626537 C43.359302,21.6847319 44.0098178,20.943255 44.135724,20.7314044 C44.3455678,20.3288884 44.3245835,20.3288884 43.2543801,20.6890343 C41.4707078,21.324586 41.2188952,21.2398458 42.1002392,20.2865183 C42.750755,19.6085965 43.527177,18.3798634 43.527177,18.0197174 C43.527177,17.9561623 43.2124113,18.0620876 42.8556769,18.252753 C42.477958,18.4646036 41.6385828,18.7823794 41.0090514,18.9730449 L39.8758949,19.3331908 L38.8476603,18.634084 C38.281082,18.252753 37.4836756,17.829052 37.063988,17.7019416 C35.9937846,17.4053509 34.357003,17.447721 33.3917215,17.7866818 C30.768674,18.7400093 29.110908,21.1974757 29.2997675,23.8879776 Z M29.2997675,23.8879776" id="Path" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+    <path d="M60.0867052,30 C60.0867052,46.5685433 46.6358389,60 30.0433526,60 C23.8895925,60 18.1679598,58.1525134 13.4044895,54.9827754 L47.8290478,5.81941103 C55.2628108,11.2806503 60.0867052,20.0777973 60.0867052,30 Z M60.0867052,30" id="reflec" fill-opacity="0.08" fill="#000000" sketch:type="MSShapeGroup"></path>
+</svg></a>
+          
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>

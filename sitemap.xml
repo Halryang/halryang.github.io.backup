@@ -21,6 +21,31 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>http://halryang.github.io/How-I-Use-nvALT/</loc>
+    <lastmod>2014-11-02T00:27:28+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://halryang.github.io/Check-for-Update/</loc>
+    <lastmod>2014-10-31T00:35:20+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://halryang.github.io/markdown-toc-generator/</loc>
+    <lastmod>2014-10-30T00:38:49+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://halryang.github.io/How-I-Use-Pinboard/</loc>
+    <lastmod>2014-10-28T00:41:38+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://halryang.github.io/Disable-comments/</loc>
+    <lastmod>2014-10-22T00:46:42+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://halryang.github.io/getsharableurl/</loc>
     <lastmod>2014-10-20T23:35:35+09:00</lastmod>
     <priority>0.8</priority>
@@ -37,20 +62,26 @@
   </url>
   <url>
     <loc>http://halryang.github.io/404.html</loc>
-    <lastmod>2014-11-19T14:29:22+09:00</lastmod>
+    <lastmod>2014-11-19T15:57:45+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://halryang.github.io/about/</loc>
-    <lastmod>2014-11-19T14:29:22+09:00</lastmod>
+    <lastmod>2014-11-19T15:57:45+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://halryang.github.io/</loc>
-    <lastmod>2014-11-19T14:29:22+09:00</lastmod>
+    <lastmod>2014-11-19T15:57:45+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://halryang.github.io/original</loc>
+    <lastmod>2014-11-19T15:57:45+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

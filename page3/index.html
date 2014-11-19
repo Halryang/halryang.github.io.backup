@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
-    <title>Jekyll에서 Youtube 영상을 Responsive하게 임베딩하기 :: 한량의 Jekyll 블로그</title>
+    <title>한량의 Jekyll 블로그</title>
 
     <meta name="author" content="한량의 Jekyll 블로그" />
     <meta name="description" content="안녕하세요. CLI를 모르는 한량이 만든 Jekyll 블로그에 오셨습니다.">
@@ -40,33 +40,59 @@
     </div>
 
     <div id="main" role="main" class="container">
-      <article class="post">
-  <h1>Jekyll에서 Youtube 영상을 Responsive하게 임베딩하기</h1>
+      <!-- This loops through the paginated posts -->
+<div class="posts">
+  
+    <article class="post">    
+      
+      <h1><a href="/Start-Blogging-With-Jekyll/">GitHub pages를 이용하여 Jekyll Blog를 만들자</a></h1>
 
-  <div class="entry">
-    <p>Jekyll은 정적인 사이트를 만드는 툴로서, 지금까지 제가 본 바론 글을 쓰기에 최적화 되어 있습니다. Code highlight도 있어 개발자가 쓰기에 딱 좋아보입니다. 하지만 저는 개발은 전혀 모르고 개인 블로그를 가볍게 운영하려고 Jekyll을 사용하고 있습니다. 가끔 Youtube에서 좋은 영상을 발견하면 블로그에 올려두기도 하는데, Jekyll에선 Liquid Tag를 이용해서 Youtube 영상을 공유할 수 있습니다.</p>
+      <div class="entry">
+        <h1>Intro</h1> <p>GitHub pages를 이용하여 Jekyll Blog를 만들어 봤다. 기본적인 지식도 제대로 갖추지 못한 내가 CLI를 MS-DOS시절 이후 오랜만에 조금씩 써가면서 만드는데 도움이 된 글들을 먼저 링크하고 싶다.</p> <ul> <li><a href="http://nolboo.github.io/blog/2013/10/15/free-blog-with-github-jekyll/">지킬로 깃허브에 무료 블로그 만들기 - @n0lb00&#39;s Blog</a></li> <li><a href="http://pixelcog.com/blog/2013/jekyll-from-scratch-introduction/">Jekyll From...
+      </div>
+      
+      <a href="/Start-Blogging-With-Jekyll/" class="read-more">Read More</a>
+    </article>
+  
+    <article class="post">    
+      
+      <h1><a href="/bamboo-palmrest/">대나무 팜레스트 구매</a></h1>
 
-<p>저는 Liquid Tag는 <a href="https://twitter.com/ttscoff">ttscoff</a>가 만든 플러그인(<a href="https://github.com/ttscoff/JekyllPlugins/tree/master/YouTube" title="JekyllPlugins/YouTube at master · ttscoff/JekyllPlugins · GitHub">GitHub Repo</a>)을 사용합니다. Youtube 외에 Vimeo 등을 임베딩하는 <a href="https://gist.github.com/vanto/1455726" title="OEmbed Liquid Tag for Jekyll">OEmbed</a>도 쓰려고 시도해봤으나 뭐가 문제인지 영상이 나오지 않았습니다.</p>
+      <div class="entry">
+        <p><img src="https://files.app.net/1/1349886/afGpEEuvGkJICtcaZ5ndWGQygaJ0x25LS4oE0Ve5SLc0zHNXA8BK-MV-1hdlm0czOMrQhejWEipoVejrIH4PXjbAp97vF0614vHGeodDh2KaMeo3b-zkERk69grg9ZPW6AsX0MZ0_oim9M9kprF5-mPqyyj5kTHgGJENt-I87L3HGDHu1xabcCAR_KkNth1un" alt="Bamboo Palmrest"></p> <p>직장 업무환경을 계속해서 저에게 맞도록 꾸미는 중입니다. 저는 기계식키보드를 사용중이고, 꼭 업무에 필요한 일 외에 제가 하는 것들은 모두 Macbook Air 2012 13inch를 이용해서 하고 있습니다. 아무래도 맥북을 모니터에 물려서 사용하다보니 맥북을 그냥 열어둘 필요까진 없어서...
+      </div>
+      
+      <a href="/bamboo-palmrest/" class="read-more">Read More</a>
+    </article>
+  
+</div>
 
-<p>YouTube Jekyll Plugin은 로컬 지킬에 &quot;_plugins&quot; 폴더를 만들고 &quot;youtube_tag.rb&quot; 파일을 넣으면 사용 준비가 끝난 것입니다. 이제 글을 적다가 영상을 넣기 원하는 곳에 <code>{ % youtube https://www.youtube.com/watch?v=G33WiEktUo8 % }</code>의 형식으로 YouTube 주소를 넣으면 됩니다. 글만 있으니 말이 나온 김에 좋은 노래 하나 삽입하고 계속 글을 이어가죠.</p>
+<!-- Pagination links -->
 
-<style>.bt-video-container iframe,.bt-video-container object,.bt-video-container embed{position:absolute;top:0;left:0;width:100%;height:100%;margin-top:0}</style>
+<div class="pagination">
+  
+    <a href="/page2">&laquo; Prev</a>
+  
 
-<div class="bt-video-container" style="position:relative;padding-bottom:56.25%;height:auto;max-width:100%overflow:hidden"><iframe width="640" height="480" src="http://www.youtube.com/embed/G33WiEktUo8?rel=0" frameborder="0" allowfullscreen></iframe></div>
+  
+    
+      <a href="/index.html">1</a>
+    
+  
+    
+      <a href="/page2">2</a>
+    
+  
+    
+      <em>3</em>
+    
+  
 
-<p>ttscoff의 플러그인은 반응형으로 삽입됩니다. 크기가 작은 모바일 기기에서도 영상이 잘리지 않는다는 장점이 있지요. 한 가지 마음에 들지 않는 점이 있다면 영상 위 아래로 검은 여백이 생긴다는 것이었습니다. 그래서 방법을 열심히 검색해서 &lt;<a href="http://embedresponsively.com/">http://embedresponsively.com/</a>&gt;라는 사이트를 알게 되었습니다. youtube 영상 주소를 입력하면 반응형으로 임베딩할 수 있는 주소를 알려주는 곳입니다. 예를 들면 아래와 같은 형태로 나옵니다.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;style&gt;.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }&lt;/style&gt;&lt;div class=&#39;embed-container&#39;&gt;&lt;iframe src=&#39;http://www.youtube.com/embed/eqSCunKweu8&#39; frameborder=&#39;0&#39; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
-</code></pre></div>
-<p>물론 이 주소를 마크다운 문서에 그대로 붙여 넣고 사용해도 되지만 문서를 편집하면서 보기에 영 좋지 않습니다. 그래서 &quot;youtube_tag.rb&quot; 파일을 위 사이트에서 만들어진 주소를 참고해서 좀 변형했습니다. 그랬더니 위아래에 있던 검은 여백이 사라졌습니다. 이것으로 제가 원하는 모습의 youtube 임베딩이 가능해졌습니다. 제가 수정한 파일은 <a href="/assets/youtube_tag.rb">이곳</a>을 누르시면 내려받을 수 있습니다.</p>
+  
+    <span>Next &raquo;</span>
+  
+</div>
 
-  </div>
-
-  <div class="date">
-    <br>  
-    이 글은 2014-11-18에 작성되었습니다.
-  </div>
-
-</article>
     </div>
 
     <div class="wrapper-footer">

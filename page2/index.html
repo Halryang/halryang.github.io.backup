@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
-    <title>Jekyll에서 Youtube 영상을 Responsive하게 임베딩하기 :: 한량의 Jekyll 블로그</title>
+    <title>한량의 Jekyll 블로그</title>
 
     <meta name="author" content="한량의 Jekyll 블로그" />
     <meta name="description" content="안녕하세요. CLI를 모르는 한량이 만든 Jekyll 블로그에 오셨습니다.">
@@ -40,33 +40,92 @@
     </div>
 
     <div id="main" role="main" class="container">
-      <article class="post">
-  <h1>Jekyll에서 Youtube 영상을 Responsive하게 임베딩하기</h1>
+      <!-- This loops through the paginated posts -->
+<div class="posts">
+  
+    <article class="post">    
+      
+      <h1><a href="/Check-for-Update/">Check for Update - Keyboard Maestro Macro</a></h1>
 
-  <div class="entry">
-    <p>Jekyll은 정적인 사이트를 만드는 툴로서, 지금까지 제가 본 바론 글을 쓰기에 최적화 되어 있습니다. Code highlight도 있어 개발자가 쓰기에 딱 좋아보입니다. 하지만 저는 개발은 전혀 모르고 개인 블로그를 가볍게 운영하려고 Jekyll을 사용하고 있습니다. 가끔 Youtube에서 좋은 영상을 발견하면 블로그에 올려두기도 하는데, Jekyll에선 Liquid Tag를 이용해서 Youtube 영상을 공유할 수 있습니다.</p>
+      <div class="entry">
+        <p>요즘 거의 모든 앱은 자동으로 업데이트가 있는지 확인하는 기능이 있다. 그래도 앱을 사용하다 보면 지금 사용하고 있는 버전이 가장 최신 업데이트 버전인지 확인하고 싶은 때가 있다. 그때마다 메뉴로 커서를 옮겨서 업데이트를 확인하기 귀찮아서 매크로를 만들었다.</p> <p><img src="http://dl.dropboxusercontent.com/u/18183807/wp/CUkmm.jpg" alt="Check for Update...
+      </div>
+      
+      <a href="/Check-for-Update/" class="read-more">Read More</a>
+    </article>
+  
+    <article class="post">    
+      
+      <h1><a href="/markdown-toc-generator/">Markdown TOC Generator</a></h1>
 
-<p>저는 Liquid Tag는 <a href="https://twitter.com/ttscoff">ttscoff</a>가 만든 플러그인(<a href="https://github.com/ttscoff/JekyllPlugins/tree/master/YouTube" title="JekyllPlugins/YouTube at master · ttscoff/JekyllPlugins · GitHub">GitHub Repo</a>)을 사용합니다. Youtube 외에 Vimeo 등을 임베딩하는 <a href="https://gist.github.com/vanto/1455726" title="OEmbed Liquid Tag for Jekyll">OEmbed</a>도 쓰려고 시도해봤으나 뭐가 문제인지 영상이 나오지 않았습니다.</p>
+      <div class="entry">
+        <ol> <li>들어가며</li> <li>Markdown TOC Generator <ol> <li>장점</li> <li>단점</li> <li>필요사항</li> <li>사용법</li> </ol></li> <li>맺음말</li> </ol> <hr> <h2>들어가며</h2> <p>마크다운 문서의 목차를 만드는 것에 관심이 생기고 검색하다가 도움을 받고자 ADN에 <a href="https://alpha.app.net/charmjf/post/41954644">질문</a>을 올렸다. 친절하게도, ADN에서 내가 팔로우하고 있는 <a href="https://alpha.app.net/jmjeong">jmjeong</a>님께서 마크다운 문서의 목차를 만드는...
+      </div>
+      
+      <a href="/markdown-toc-generator/" class="read-more">Read More</a>
+    </article>
+  
+    <article class="post">    
+      
+      <h1><a href="/How-I-Use-Pinboard/">나의 Pinboard 사용법</a></h1>
 
-<p>YouTube Jekyll Plugin은 로컬 지킬에 &quot;_plugins&quot; 폴더를 만들고 &quot;youtube_tag.rb&quot; 파일을 넣으면 사용 준비가 끝난 것입니다. 이제 글을 적다가 영상을 넣기 원하는 곳에 <code>{ % youtube https://www.youtube.com/watch?v=G33WiEktUo8 % }</code>의 형식으로 YouTube 주소를 넣으면 됩니다. 글만 있으니 말이 나온 김에 좋은 노래 하나 삽입하고 계속 글을 이어가죠.</p>
+      <div class="entry">
+        <p>나는 <a href="https://pinboard.in/">Pinboard</a>를 접한 이후로 그 단순함과 빠릿빠릿함에 빠져서 지금은 RSS로 구독하는 사이트 외에 웹서핑을 통해 알게 되어 다시 볼 만한 사이트는 모두 Pinboard에 추가한다. RSS로 구독하고 있는 사이트에서도 다시 보고 싶은 글은 Pinboard에 저장하고 있다. 이글은 지금까지 내가 Pinboard를...
+      </div>
+      
+      <a href="/How-I-Use-Pinboard/" class="read-more">Read More</a>
+    </article>
+  
+    <article class="post">    
+      
+      <h1><a href="/Disable-comments/">블로그 댓글 시스템 없앰</a></h1>
 
-<style>.bt-video-container iframe,.bt-video-container object,.bt-video-container embed{position:absolute;top:0;left:0;width:100%;height:100%;margin-top:0}</style>
+      <div class="entry">
+        <p>블로그를 처음 개설할 때부터 블로그에 댓글이 꼭 필요한지 생각했습니다. 블로그가 소통의 창구로 사용될 수 있기에 댓글의 순기능과 악기능에 대해 이미 블로그를 운영하는 사람들의 많은 의견이 있었습니다. 이에 대해서는 Matt Gemmell이 적은 <a href="http://mattgemmell.com/comments-commentary/" title="Comments Commentary - Matt Gemmell">Comments Commentary</a>라는 글에서...
+      </div>
+      
+      <a href="/Disable-comments/" class="read-more">Read More</a>
+    </article>
+  
+    <article class="post">    
+      
+      <h1><a href="/getsharableurl/">Copy Dropbox public link url to Clipboard - Keyboard Maestro Macro</a></h1>
 
-<div class="bt-video-container" style="position:relative;padding-bottom:56.25%;height:auto;max-width:100%overflow:hidden"><iframe width="640" height="480" src="http://www.youtube.com/embed/G33WiEktUo8?rel=0" frameborder="0" allowfullscreen></iframe></div>
+      <div class="entry">
+        <h2>Dropbox의 Public 폴더 안의 파일의 공유 링크를 쉽게 얻자</h2> <p>나처럼 Mytory markdown plugin을 사용해서 워드프레스에 포스팅하는 경우(워드프레스 포스팅 자동화에 관한 <a href="http://sunjin.us/automation-for-wp-posting/" title="Automation for wp posting | SUNJIN">이전 글</a> 참조) Dropbox의 공개링크 url이 필요하다. 그래서 Copy Dropbox public link url...
+      </div>
+      
+      <a href="/getsharableurl/" class="read-more">Read More</a>
+    </article>
+  
+</div>
 
-<p>ttscoff의 플러그인은 반응형으로 삽입됩니다. 크기가 작은 모바일 기기에서도 영상이 잘리지 않는다는 장점이 있지요. 한 가지 마음에 들지 않는 점이 있다면 영상 위 아래로 검은 여백이 생긴다는 것이었습니다. 그래서 방법을 열심히 검색해서 &lt;<a href="http://embedresponsively.com/">http://embedresponsively.com/</a>&gt;라는 사이트를 알게 되었습니다. youtube 영상 주소를 입력하면 반응형으로 임베딩할 수 있는 주소를 알려주는 곳입니다. 예를 들면 아래와 같은 형태로 나옵니다.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;style&gt;.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }&lt;/style&gt;&lt;div class=&#39;embed-container&#39;&gt;&lt;iframe src=&#39;http://www.youtube.com/embed/eqSCunKweu8&#39; frameborder=&#39;0&#39; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
-</code></pre></div>
-<p>물론 이 주소를 마크다운 문서에 그대로 붙여 넣고 사용해도 되지만 문서를 편집하면서 보기에 영 좋지 않습니다. 그래서 &quot;youtube_tag.rb&quot; 파일을 위 사이트에서 만들어진 주소를 참고해서 좀 변형했습니다. 그랬더니 위아래에 있던 검은 여백이 사라졌습니다. 이것으로 제가 원하는 모습의 youtube 임베딩이 가능해졌습니다. 제가 수정한 파일은 <a href="/assets/youtube_tag.rb">이곳</a>을 누르시면 내려받을 수 있습니다.</p>
+<!-- Pagination links -->
 
-  </div>
+<div class="pagination">
+  
+    <a href="/index.html">&laquo; Prev</a>
+  
 
-  <div class="date">
-    <br>  
-    이 글은 2014-11-18에 작성되었습니다.
-  </div>
+  
+    
+      <a href="/index.html">1</a>
+    
+  
+    
+      <em>2</em>
+    
+  
+    
+      <a href="/page3">3</a>
+    
+  
 
-</article>
+  
+    <a href="/page3">Next &raquo;</a>
+  
+</div>
+
     </div>
 
     <div class="wrapper-footer">

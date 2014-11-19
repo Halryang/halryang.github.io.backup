@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    <title>나의 Pinboard 사용법 :: 한량의 Jekyll 블로그</title>
+
+    <meta name="author" content="한량의 Jekyll 블로그" />
+    <meta name="description" content="안녕하세요. CLI를 모르는 한량이 만든 Jekyll 블로그에 오셨습니다.">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="한량의 Jekyll 블로그 - 안녕하세요. CLI를 모르는 한량이 만든 Jekyll 블로그에 오셨습니다." href="/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png" /></a>
+          
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">한량의 Jekyll 블로그</a></h1>
+            <p class="site-description">안녕하세요. CLI를 모르는 한량이 만든 Jekyll 블로그에 오셨습니다.</p>
+          </div>
+          
+          <nav>
+            <a href="/">Blog</a>
+            <a href="/about">About</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>나의 Pinboard 사용법</h1>
+
+  <div class="entry">
+    <p>나는 <a href="https://pinboard.in/">Pinboard</a>를 접한 이후로 그 단순함과 빠릿빠릿함에 빠져서 지금은 RSS로 구독하는 사이트 외에 웹서핑을 통해 알게 되어 다시 볼 만한 사이트는 모두 Pinboard에 추가한다. RSS로 구독하고 있는 사이트에서도 다시 보고 싶은 글은 Pinboard에 저장하고 있다. 이글은 지금까지 내가 Pinboard를 이용하는 행태의 총정리이다.</p>
+
+<ol>
+<li>Pinboard 소개</li>
+<li>Pinboard 즐겨찾기 추가]
+
+<ol>
+<li>Safari 북마클릿으로 추가</li>
+<li>IFTTT를 이용한 즐겨찾기 추가</li>
+<li>Shiori를 이용한 즐겨찾기 추가</li>
+</ol></li>
+<li>Pinboard 검색 및 보기
+
+<ol>
+<li>LaunchBar와 Pinboard</li>
+<li>Shiori를 이용한 나의 Pinboard 브라우징</li>
+<li>Alfred 사용자를 위한 워크플로우</li>
+</ol></li>
+<li>iOS에서 Pinboard 사용하기</li>
+<li>맺음말</li>
+</ol>
+
+<h2>Pinboard 소개</h2>
+
+<p>핀보드는 온라인에서 찾은 링크를 보관할 수 있는 유료 웹서비스다. 유료 모델이 상당히 독특한데, 처음 가입할 때 가입비가 들고 그 이후에는 평생 무료다.[<sup>1]</sup> 현재 $10.52[<sup>2]에</sup> 가입할 수 있다. 모든 링크를 보관할 수 있으며 각 링크마다 공개할 것인지 비공개로 보관하여 나만 볼 수 있도록 할 것인지 선택할 수 있다. 광고가 없는 매우 간결한 디자인으로 보이는 것보다는 성능이 중요하다고 생각하는 사람이라면 매우 좋아할 것이다.</p>
+
+<p>핀보드가 말하는 핀보드를 사용해야 하는 13가지 이유는 다음과 같다.</p>
+
+<ol>
+<li>핀보드는 매우 빠르다. 링크와 태그가 수만개에 달해도 빠르다.</li>
+<li><a href="https://delicious.com/">Delicious</a>, <a href="https://www.instapaper.com/">Instapaper</a>, <a href="https://getpocket.com/">Pocket</a>를 포함한 여러 다른 사이트에서 즐겨찾기를 동기화할 수 있다.</li>
+<li>트위터 계정을 3개까지 연결하여 사용자의 트윗을 검색가능하도록 보관할 수 있다.</li>
+<li>신뢰할 수 있을만한 안정성을 제공한다. 서비스가 정지되는 경우는 좀처럼 없으며 있다 하더라도 잠시 후 정상화된다.[<sup>3]</sup></li>
+<li>Pinboard는 간결하고 가벼운 디자인을 제공한다.</li>
+<li>가격 정책이 간단하고 비싸지 않다. 단 한 번의 가입비만 내면 된다.</li>
+<li>핀보드 사이트의 모든 것은 RSS 피드로 사용할 수 있다.</li>
+<li>다양한 형태로 데이터를 가져오고(Import) 내보낼(Export) 수 있다.</li>
+<li>손쉽게 사용할 수 있는 브라우저 플러그인을 제공한다.</li>
+<li>사용자의 비밀을 유지한다. 핀보드 사용자의 절반은 자신의 링크를 공개하지 않는다.</li>
+<li>full API를 제공하며 많은 수의 써드파티 클라이언트 앱이 있다.</li>
+<li>이메일과 트위터를 통해 빠른 고객지원을 제공한다.</li>
+<li>납득할 정도의 적당한 비즈니스 모델을 갖고 있다.</li>
+</ol>
+
+<p>자세한 설명은 핀보드에서 제공하는 <a href="https://pinboard.in/tour/" title="Pinboard Site Tour — Better Online Bookmarking!">소개 페이지</a>를 참고하기 바란다.</p>
+
+<h2>Pinboard 즐겨찾기 추가</h2>
+
+<h3>Safari 북마클릿으로 추가</h3>
+
+<p>주로 맥북으로 웹서핑을 하는 나는 Safari 북마클릿을 이용해서 Pinboard에 보고 있는 페이지를 추가했다. 이것도 그리 나쁘진 않다. Safari에서 보고 있는 웹페이지를 Pinboard에 추가하고 싶으면 나의 경우 &quot;⌘+3&quot;을 누르면 바로 Pinboard에 추가할 수 있는 팝업 창이 생성되고, URL과 title은 현재 페이지의 정보가 저절로 입력된다. 추가로 description, tags를 입력하거나, private 즐겨찾기로 저장할 것인지, 나중에 읽기(read later)로 저장할 것인지 선택할 수 있다. 여기서 현재 추가하려는 페이지에 어울릴만한 태그를 제안(suggest)하니, 즐겨찾기를 추가하는 데 필요한 기능은 모두 있다. Pinboard에서 제공하는 <a href="https://pinboard.in/howto/#saving" title="Pinboard: howto page">즐겨찾기를 저장하는 방법</a>에 더 자세한 설명이 있다.</p>
+
+<h3>IFTTT를 이용한 즐겨찾기 추가</h3>
+
+<p>또 하나의 중요한 즐겨찾기를 추가하는 방법은 <a href="https://ifttt.com/">IFTTT</a>를 이용하는 것이다. IFTTT는 <a href="http://twitter.com/">트위터</a>와 <a href="http://app.net/">ADN</a>을 포함한 수많은 채널이 존재하고 각 채널 간의 상호작용을 자동화할 수 있는 서비스이다. 매우 편리한 서비스인데 무료이니 혹시 아직 사용해보지 않았다면 둘러보길 바란다. 내가 여기서 말하고자 하는 레시피는 트위터와 ADN에서 Favorite 한 트윗/포스트의 링크를 Pinboard에 공개 즐겨찾기(Public bookmark)로 저장하는 것이다. 매우 단순하고 직관적으로 레시피를 만들고 활성화할 수 있다.</p>
+
+<p>트위터와 ADN의 타임라인을 보다 보면 읽어보고 싶은 링크를 발견하는 경우가 많은데 나는 그때마다 링크를 클릭해서 링크 글을 읽지 않고 일단 Favorite 기능을 이용하여 &quot;별표&quot;한다. 이렇게 하면 위에서 활성화한 IFTTT 레시피를 통해 별표된 트윗/포스트가 내 Pinboard 즐겨찾기에 저장되고 나중에 원하는 시간에 읽을 수 있다. IFTTT는 실시간으로 동기화되는 것은 아니고 일정 시간 간격으로 트리거 되지만 내가 아주 많은 링크를 별표 하는 것은 아니라서 지금까지 문제가 된 적은 없다.</p>
+
+<h3>Shiori를 이용한 즐겨찾기 추가</h3>
+
+<p><a href="http://aki-null.net/shiori/" title="Shiori - Pinboard and Delicious OS X client">Shiori</a>는 <a href="https://pinboard.in/">Pinboard</a>와 <a href="https://delicious.com/">Delicious</a>의 즐겨찾기를 검색하고 추가할 수 있는 OS X 클라이언트 앱이다. 단순하고 보기 좋은 인터페이스로 자신의 Pinboard에 즐겨찾기를 추가할 수 있으며 Safari, 크롬, 파이어폭스를 지원하여 웹브라우저에서 현재 보고 있는 페이지를 손쉽게 추가할 수 있다. 이때 현재 보고 있는 페이지의 URL과 제목이 저절로 들어가는 것은 물론이고 태그 입력 시 자동 완성 기능, Notes에 원하는 메모를 입력하거나, Private 즐겨찾기로 추가하는 옵션이 있다. 태그 입력하는 필드 오른편에 있는 &quot;+&quot;버튼을 누르면 태그 추천 창이 팝업된다. 설정에서 Private URLs 탭을 이용하면 특정 도메인의 페이지를 즐겨찾기 추가할 때 자동으로 Private 즐겨찾기로 등록하도록 설정할 수 있다.</p>
+
+<p>OS X 10.7 이상의 운영체제를 사용하고 있다면 <a href="http://aki-null.net/shiori/release/Shiori_1.0.2.zip">이곳</a>에서 무료로 내려받을 수 있다. 나는 현재 요세미티에서 아무런 문제 없이 사용하고 있다. Shiori에 대한 다른 리뷰는 <a href="http://www.macstories.net/mac/shiori-free-pinboard-client-for-mac/" title="Shiori, Free Pinboard Client for Mac – MacStories">MacStories</a>와 <a href="http://www.idownloadblog.com/2013/11/30/shiori-my-favorite-pinboard-utility-for-the-mac/" title="Shiori: my favorite Pinboard utility for the Mac">iDownloadBlog</a>에서 볼 수 있다.</p>
+
+<h2>Pinboard 검색 및 보기</h2>
+
+<p>Pinboard에 등록한 즐겨찾기를 검색하고 보는 방법은 크게 세 가지 방법으로 사용중이다. 가장 평범한 방법인 Safari에서 바로 <a href="https://pinboard.in">https://pinboard.in</a>에 접속해서 보는 방법과, LaunchBar 액션을 이용해서 보는 방법, Shiori를 이용하는 방법이다. <a href="https://pinboard.in">https://pinboard.in</a>에 접속해서 보는 방법은 따로 설명할 필요가 없을 것 같으니 나머지 두 가지 방법만 설명하겠다.</p>
+
+<h3>LaunchBar와 Pinboard</h3>
+
+<p>나는 Pinboard와 관련된 LaunchBar 액션을 2개 쓰고 있다. 하나는 <a href="https://github.com/gillibrand/launchbar-pinboard" title="gillibrand/launchbar-pinboard">나의 Pinboard 즐겨찾기를 보기 위한 액션</a>이다. 이것을 이용하면 내가 등록한 즐겨찾기를 태그 검색, 최근 25개의 항목, 읽지 않은 즐겨찾기 등의 다양한 옵션으로 접근할 수 있다. 이 액션이 내가 지금까지 찾은 LaunchBar 액션 중에서 가장 빠르게 최근 등록된 즐겨찾기를 보여주었다. <a href="http://www.macdrifter.com/2014/07/pinboard-actions-for-launchbar.html" title="Pinboard Actions for Launchbar">Macdrifter에 있는 글</a>을 참고하면 액션을 실행했을 때 어떻게 보이는지 확인할 수 있다. </p>
+
+<p>위의 액션은 Pinboard에 내가 등록한 즐겨찾기만 검색할 수 있다. 그래서 나는 다른 Pinboard 사용자들이 등록한 공개 즐겨찾기도 검색할 수 있는 <a href="https://github.com/nbjahan/launchbar-pinboard/releases/tag/v1.0.2">Pinboard Browse 액션</a>을 하나 더 등록해서 쓰고 있다. Pinboard를 완벽하게 사용할 수 있는 액션 세트라서 자신의 Pinboard 즐겨찾기를 탐색할 수 있는 Pinboard 액션도 함께 있는데, 내가 사용해 본 바로는 새로운 즐겨찾기가 등록되면 최근 등록된 즐겨찾기 목록에 올라오는 데 시간 딜레이가 좀 있었다. 그래서 나는 이 액션 묶음 중에서 Pinboard Browse라는 액션만 활성화하여 사용하는 중이다.</p>
+
+<h3>Shiori를 이용한 나의 Pinboard 브라우징</h3>
+
+<p>Shiori에서 대해서는 앞에 즐겨찾기를 추가하는 방법에서 소개했다. Shiori에서는 내가 등록한 Pinboard를 검색할 수 있다. 이미 등록한 즐겨찾기를 편집할 수는 없다. Shiori를 통해 등록한 북마크를 검색하면 축약어(abbreviations)를 사용하여 검색할 수 있어서 − 예를 들어 <em>Pinboard</em>를 <em>pbd</em>만 입력하여 검색할 수 있다 − 더욱 빠르게 검색할 수 있다는 장점이 있다. Shiori는 사용자의 습관을 학습하여 더 많이 Shiori를 사용할수록 더 똑똑해진다고 한다.</p>
+
+<h3>Alfred 사용자를 위한 워크플로우</h3>
+
+<p>Alfred 사용자를 위한 보너스가 있다. <a href="http://www.alfredforum.com/topic/4426-alfred-pinboard-version-225-updated/" title="alfred-pinboard version 2.25 (updated) - Share your Workflows - Alfred App Community Forum">jmjeong님이 공유한 워크플로우</a>를 확인해보길 바란다.</p>
+
+<h2>iOS에서 Pinboard 사용하기</h2>
+
+<p>iOS에는 Pinboard를 편하게 사용할 수 있도록 돕는 어플이 많이 있다. 가장 대표적인 것들에는 <a href="https://itunes.apple.com/kr/app/pinswift-fast-powerful-pinboard/id766741240?mt=8&amp;uo=4">Pinswift</a>, <a href="https://itunes.apple.com/kr/app/pushpin-for-pinboard/id548052590?mt=8&amp;uo=4">Pushpin</a>, <a href="https://itunes.apple.com/kr/app/pinner-for-pinboard/id591613202?l=en&amp;mt=8">Pinner</a> 등이 있다. 나는 현재 Pinswift를 사용한다. Pinswift는 iOS 8에 대응하여 업데이트 되면서 많은 장점이 생겼다. 그 특징은 다음과 같다.</p>
+
+<ul>
+<li><strong>iOS 8 공유 익스텐션 지원</strong>으로 시스템의 기본 공유 메뉴를 지원하는 곳이라면 어디서나 페이지를 즐겨찾기로 추가할 수 있다.</li>
+<li><strong>즐겨찾기 제목과 Description을 제안</strong>하여 대부분의 웹페이지를 즐겨찾기에 추가할 때 제목과 설명을 따로 입력하지 않아도 된다. 물론 사용자가 원한다면 즐겨찾기 제목과 설명을 원하는대로 입력할 수 있다.</li>
+<li><strong>짧은 제목 제안</strong>기능은 위의 즐겨찾기 제목 제안 기능에 추가되는 기능이라고 생각하면 되겠다. 페이지를 즐겨찾기에 추가할 때 사이트 이름이나 도메인 이름 등을 제거하여 더 짧은 제목을 제안한다.</li>
+<li><strong>태그 제안</strong>과 <strong>태그 자동완성 기능</strong>은 기본이다.</li>
+<li>클립보드에 URL 주소가 복사되어 있는 상태에서 Pinswift를 실행하면 클립보드에 있는 주소를 즐겨찾기에 추가할 것인지 물어본다.</li>
+<li>Pinswift 내에서 브라우징 하는 것도 상당히 매끄럽게 잘 실행된다.</li>
+<li>사진, 움직이는 GIF, PDF 등 HTML URL이 아닌 것들은 <em>Open in</em> 액션을 이용하여 다른 앱에서 열 수 있다.</li>
+<li>트위터 링크나 사용자 이름은 사용자가 선택한 트위터 앱에서 열리도록 설정할 수 있다. 나는 Tweetbot 3를 사용하기에 Tweetbot 3에서 열리도록 설정해뒀다.</li>
+<li>URL scheme를 지원하여 <a href="https://itunes.apple.com/kr/app/drafts-4-quickly-capture-notes/id905337691?l=en&amp;mt=8">Drafts 4</a>, <a href="https://itunes.apple.com/kr/app/launch-center-pro/id532016360?l=en&amp;mt=8">Launch Center Pro</a>, <a href="https://itunes.apple.com/kr/app/day-one-journal-notes-diary/id421706526?l=en&amp;mt=8">DayOne</a>, <a href="https://itunes.apple.com/kr/app/due-super-fast-reminders-reusable/id390017969?l=en&amp;mt=8">Due</a> 등의 다른 앱들과 연계가 잘 된다.</li>
+</ul>
+
+<p>나는 Pinswift를 사용하기에 Pinswift의 특징을 간략하게 설명했지만 꼭 Pinswift가 아니어도 Pinboard를 매우 편하게 사용할 수 있도록 하는 앱들이 많으니 아이폰이나 아이패드를 사용하는 사람은 Pinboard 전용 앱을 써볼 것을 권장한다.</p>
+
+<h2>맺음말</h2>
+
+<p>지금까지 내가 Pinboard를 사용하는 방법을 정리했다. 긴 글을 적으면서 내가 Pinboard를 접한 이후로 벌써 이런 시도들을 해봤구나 하는 생각이 들기도 하고 Pinboard를 가장 잘 사용하기 위해 나보다 훨씬 다양한 방법을 시도해 본 사람도 분명 있을 것이란 생각도 들었다. 이 글이 이제부터 Pinboard를 사용해보려는 생각을 갖고 있는 사람이나 이미 Pinboard를 사용하고는 있지만 <a href="http://pinboard.in" title="Pinboard website">Pinboard 웹사이트</a>만 사용하다가 다른 방법을 찾아 헤메는 사람에게 도움이 되었으면 좋겠다.</p>
+
+<p>[<sup>1]:</sup> 링크의 원래 페이지가 없어지더라도 볼 수 있도록 보관하는 &quot;Bookmark Archive&quot; 기능을 이용하려면 &quot;$25/년&quot;의 별도 플랜을 이용해야 한다.</p>
+
+<p>[<sup>2]:</sup> 가입자가 늘어날수록 가입비가 비싸진다. 내가 가입할 때도 $10 정도였으니 지금 가입자가 많이 늘어나고 있지는 않은 것 같다.</p>
+
+<p>[<sup>3]:</sup> 나는 지금까지 Pinboard가 작동하지 않는 것을 본 적이 없다.</p>
+
+  </div>
+
+  <div class="date">
+    <br>  
+    이 글은 2014-10-28에 작성되었습니다.
+  </div>
+
+</article>
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+                    
+          <a href="mailto:charmjf@gmail.com"><svg width="40px" height="40px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <path d="M0.224580688,30 C0.224580688,13.4314567 13.454941,0 29.7754193,0 C46.0958976,0 59.3262579,13.4314567 59.3262579,30 C59.3262579,46.5685433 46.0958976,60 29.7754193,60 C13.454941,60 0.224580688,46.5685433 0.224580688,30 Z M0.224580688,30" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+    <path d="M35.0384324,31.6384006 L47.2131148,40.5764264 L47.2131148,20 L35.0384324,31.6384006 Z M13.7704918,20 L13.7704918,40.5764264 L25.9449129,31.6371491 L13.7704918,20 Z M30.4918033,35.9844891 L27.5851037,33.2065217 L13.7704918,42 L47.2131148,42 L33.3981762,33.2065217 L30.4918033,35.9844891 Z M46.2098361,20 L14.7737705,20 L30.4918033,32.4549304 L46.2098361,20 Z M46.2098361,20" id="Shape" fill="#333333" sketch:type="MSShapeGroup"></path>
+    <path d="M59.3262579,30 C59.3262579,46.5685433 46.0958976,60 29.7754193,60 C23.7225405,60 18.0947051,58.1525134 13.4093244,54.9827754 L47.2695458,5.81941103 C54.5814438,11.2806503 59.3262579,20.0777973 59.3262579,30 Z M59.3262579,30" id="reflec" fill-opacity="0.08" fill="#000000" sketch:type="MSShapeGroup"></path>
+</svg></a>
+          
+          
+          
+          
+          
+          
+          
+          <a href="http://twitter.com/charmjf"><svg width="40px" height="40px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <path d="M0,30 C0,13.4314567 13.4508663,0 30.0433526,0 C46.6358389,0 60.0867052,13.4314567 60.0867052,30 C60.0867052,46.5685433 46.6358389,60 30.0433526,60 C13.4508663,60 0,46.5685433 0,30 Z M0,30" fill="#4099FF" sketch:type="MSShapeGroup"></path>
+    <path d="M29.2997675,23.8879776 L29.3627206,24.9260453 L28.3135016,24.798935 C24.4943445,24.3116787 21.1578281,22.6592444 18.3249368,19.8840023 L16.9399677,18.5069737 L16.5832333,19.5238563 C15.8277956,21.7906572 16.3104363,24.1845684 17.8842648,25.7946325 C18.72364,26.6844048 18.5347806,26.8115152 17.0868584,26.2818888 C16.5832333,26.1124083 16.1425613,25.985298 16.1005925,26.0488532 C15.9537019,26.1971486 16.457327,28.1249885 16.8560302,28.8876505 C17.4016241,29.9469033 18.5137962,30.9849709 19.7308902,31.5993375 L20.7591248,32.0865938 L19.5420308,32.1077788 C18.3669055,32.1077788 18.3249368,32.1289639 18.4508431,32.57385 C18.8705307,33.9508786 20.5282967,35.4126474 22.3749221,36.048199 L23.6759536,36.4930852 L22.5427971,37.1710069 C20.8640467,38.1455194 18.891515,38.6963309 16.9189833,38.738701 C15.9746862,38.759886 15.1982642,38.8446262 15.1982642,38.9081814 C15.1982642,39.1200319 17.7583585,40.306395 19.2482495,40.7724662 C23.7179224,42.1494948 29.0269705,41.5563132 33.0140027,39.2047722 C35.846894,37.5311528 38.6797853,34.2050993 40.0018012,30.9849709 C40.7152701,29.2689815 41.428739,26.1335934 41.428739,24.6294545 C41.428739,23.654942 41.4916922,23.5278317 42.6668174,22.3626537 C43.359302,21.6847319 44.0098178,20.943255 44.135724,20.7314044 C44.3455678,20.3288884 44.3245835,20.3288884 43.2543801,20.6890343 C41.4707078,21.324586 41.2188952,21.2398458 42.1002392,20.2865183 C42.750755,19.6085965 43.527177,18.3798634 43.527177,18.0197174 C43.527177,17.9561623 43.2124113,18.0620876 42.8556769,18.252753 C42.477958,18.4646036 41.6385828,18.7823794 41.0090514,18.9730449 L39.8758949,19.3331908 L38.8476603,18.634084 C38.281082,18.252753 37.4836756,17.829052 37.063988,17.7019416 C35.9937846,17.4053509 34.357003,17.447721 33.3917215,17.7866818 C30.768674,18.7400093 29.110908,21.1974757 29.2997675,23.8879776 Z M29.2997675,23.8879776" id="Path" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+    <path d="M60.0867052,30 C60.0867052,46.5685433 46.6358389,60 30.0433526,60 C23.8895925,60 18.1679598,58.1525134 13.4044895,54.9827754 L47.8290478,5.81941103 C55.2628108,11.2806503 60.0867052,20.0777973 60.0867052,30 Z M60.0867052,30" id="reflec" fill-opacity="0.08" fill="#000000" sketch:type="MSShapeGroup"></path>
+</svg></a>
+          
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>

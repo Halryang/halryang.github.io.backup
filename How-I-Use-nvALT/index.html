@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    <title>How I use nvALT :: 한량의 Jekyll 블로그</title>
+
+    <meta name="author" content="한량의 Jekyll 블로그" />
+    <meta name="description" content="안녕하세요. CLI를 모르는 한량이 만든 Jekyll 블로그에 오셨습니다.">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="한량의 Jekyll 블로그 - 안녕하세요. CLI를 모르는 한량이 만든 Jekyll 블로그에 오셨습니다." href="/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png" /></a>
+          
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">한량의 Jekyll 블로그</a></h1>
+            <p class="site-description">안녕하세요. CLI를 모르는 한량이 만든 Jekyll 블로그에 오셨습니다.</p>
+          </div>
+          
+          <nav>
+            <a href="/">Blog</a>
+            <a href="/about">About</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>How I use nvALT</h1>
+
+  <div class="entry">
+    <ol>
+<li>nvALT 소개</li>
+<li>nvALT의 특징</li>
+<li>nvALT 기본 사용법
+
+<ol>
+<li>노트 검색/관리</li>
+<li>새로운 노트 만들기</li>
+<li>노트에 태그 지정하기</li>
+<li>노트 즐겨찾기 이용하기</li>
+<li>노트 미리보기</li>
+</ol></li>
+<li>노트 작성 팁
+
+<ol>
+<li>북마클릿을 이용해서 노트 작성</li>
+<li>웹브라우저 익스텐션을 사용해서 노트 작성</li>
+<li>Keyboard Maestro Macro를 이용해서 빠른 노트 작성</li>
+</ol></li>
+<li>맺음말</li>
+</ol>
+
+<hr>
+
+<h2>nvALT 소개</h2>
+
+<p><a href="http://brettterpstra.com/projects/nvalt/">nvALT</a>는 <a href="http://brettterpstra.com/about/">Brett Terpstra</a>가 Notational Velocity를 기반으로 만든 맥용 plain text 글쓰기 앱이다. 겉으로 보기엔 정말 평범하고 어찌 보면 다른 유려한 디자인의 글쓰기 앱보다 이전 시대의 유물 같아 보일 수 있다. 유물이라는 표현은 조금 심했다. 어쨌든 nvALT는 일기를 잘 쓰지 않던 사람도 일기를 쓰고 싶어지게 한다는 <a href="http://dayoneapp.com/">DayOne</a>과 같은 앱은 아니다. 하지만 nvALT는 사용자가 적어야 하는 글의 내용에 집중하도록 돕는다. 이미 작성한 노트를 관리, 검색하는 것도 매우 빠르다. 단순한 외형 속에 숨어 있는 기능을 사용하다 보면 어느새 뭔가 적을 일이 생기면 자연스레 nvALT를 실행하는 자신을 발견하게 된다.</p>
+
+<blockquote>
+<p>nvALT doesn’t just record your words; it’s specifically designed to make searching for and organizing your notes super-fast and easy. _from <a href="http://www.macworld.com/article/2047073/nvalt-review-makes-writing-and-finding-plain-text-notes-simple.html" title="nvALT review: Makes writing and finding plain-text notes simple | Macworld">Macworld</a></p>
+</blockquote>
+
+<p>나는 아주 긴 호흡의 글이 아니라면 모든 글을 nvALT에서 쓴다. 긴 호흡의 글도 처음에는 nvALT에서 쓰기 시작해서 Scrivener로 옮겨 가는 경우가 많다. nvALT는 개발자의 <a href="http://brettterpstra.com/projects/nvalt/">프로젝트 페이지</a>에서 무료로 내려받을 수 있다.</p>
+
+<h2>nvALT의 특징</h2>
+
+<ul>
+<li><strong>[[ ]]사이에 들어 가는 단어들이 다른 노트들의 링크가 된다.</strong> 많은 노트를 간단히 서로 연결할 수 있다. 특정 주제에 대해 많은 자료를 수집하는 경우 상당히 유용하다. [[ ]] 안에 노트 제목을 입력할 때 자동완성 기능을 지원한다(옵션에서 선택 가능, shortcut = ⌘⇧L).</li>
+<li><strong>막강한 태그 입력 &amp; 동기화</strong>
+
+<ul>
+<li><strong>nvALT에서 각 노트에 입력한 태그는 Dropbox를 통해 동기화되며 Spotlight에서 검색할 수 있다.</strong></li>
+<li><strong>태그 입력 시 자동 완성</strong> 기능은 기본이다.</li>
+<li><strong>여러 노트를 다중 선택해서 태그 입력</strong>이 가능하다.</li>
+</ul></li>
+<li><a href="http://www.hogbaysoftware.com/products/taskpaper"><strong>TaskPaper</strong></a>를 사용하는 사람에겐 <strong>&quot;@done&quot; 태그를 지원</strong>하여 strikethrough 형식을 지원한다.</li>
+<li><strong>자동 저장 기능</strong>이 있다. 실컷 적던 글을 날리고 중간중간 저장을 하지 않은 자신을 자책하지 않아도 된다.</li>
+<li><strong>Dropbox의 폴더 안에 문서 저장 폴더</strong>를 두면 어디서나 맥에서 편집한 문서에 접근할 수 있다.</li>
+<li><strong><a href="http://simplenote.com/">Simplenote</a>와 동기화</strong>할 수 있다. 태그도 동기화된다.</li>
+<li><strong>마크다운 문법을 지원한다.</strong> 마크다운 완성 기능을 활성화하면 마크다운 글쓰기가 더 편해진다.</li>
+<li>괄호와 따옴표([], (), &quot;&quot;, &#39;&#39;)의 <strong>auto-pairing</strong>을 지원한다.</li>
+<li><strong>외부 텍스트 편집기를 지원</strong>한다. 설정에서 외부 텍스트 편집기를 지정한 후 &quot;⌘⇧E&quot;를 누르면 선택한 문서를 다른 편집 앱에서 열 수 있다. 나는 nvALT에서 마크다운으로 글을 작성하고 <a href="http://marked2app.com/">Marked 2</a>에서 글이 어떤 형식으로 보이는지 확인한다.</li>
+<li><strong>미리보기 창을 지원한다.</strong> 외부편집기를 사용하지 않아도 마크다운으로 작성한 문서가 어떻게 보일지 확인할 수 있다.
+
+<ul>
+<li>HTML과 CSS를 커스터마이징 할 수 있다.</li>
+<li>미리보기에 &quot;Pin&quot;해두고 다른 노트를 편집할 때도 원하는 문서를 미리보기 창에서 볼 수 있다.</li>
+<li>HTML 소스 탭이 있어 소스를 빠르게 복사/붙여넣을 수 있다.</li>
+</ul></li>
+<li><a href="http://peg.gd/" title="Peggd">Peggd</a>를 통해 문서를 공유할 수 있다.</li>
+<li>노트목록과 검색 필드를 접고/펼(Collapse/Expand) 수 있다.</li>
+<li>스크롤바 토글이 가능하다.</li>
+<li>단어 수 카운트 기능</li>
+</ul>
+
+<h2>nvALT 기본 사용법</h2>
+
+<p>가장 먼저 노트를 저장할 폴더 − Dropbox 안의 폴더로 지정하면 다른 플랫폼에서의 접근성을 높일 수 있다 − 지정, 노트의 확장자와 유형 지정 등은 &quot;⌘,&quot;를 눌러 <code>환경설정 &gt; Notes</code> 에서 설정할 수 있다. 외부에디터로 사용할 앱은 <code>환경설정 &gt; Editing</code> 탭에서 지정 가능하며 그 외에 옵션 항목들과 &quot;Fonts &amp; Colors&quot;도 개인이 사용하는 스타일에 맞도록 설정하면 된다.</p>
+
+<h3>노트 검색/관리</h3>
+
+<p>제일 위에 위치한 막대바가 검색필드이자 노트 작성의 시작이 되는 노트 제목 입력란이다. nvALT 내 어디서나 &quot;⌘L&quot;로 검색필드를 선택할 수 있다. 검색필드에 타이핑을 시작하면 마치 최근의 웹브라우저의 주소창처럼 검색어 자동 완성 기능이 활성화되고, 동시에 검색어 관련 노트들이 검색필드 아래에 노트목록으로 나타난다. 노트를 찾기 위해 &quot;⌘+↑↓&quot;으로 노트목록을 탐색할 수 있다. 원하는 노트가 선택되면 &quot;Tab&quot;키를 눌러 바로 편집할 수 있다.</p>
+
+<p>노트의 이름을 변경하려면 &quot;⌘R&quot;을 눌러 변경하면 된다. 노트를 삭제하려면 &quot;⌘⌫&quot;을 누르면 된다.</p>
+
+<h3>새로운 노트 만들기</h3>
+
+<p>위에서 검색필드로 사용한 곳에 새로운 노트의 이름을 적고 리턴키를 누른다. 그리고 노트의 내용을 쓰면 된다. 노트를 작성하면 저장소로 지정한 폴더에 저절로 저장된다.</p>
+
+<h3>노트에 태그 지정하기</h3>
+
+<p>편집 중인 노트나 검색하여 선택한 노트에서 &quot;⌘⇧T&quot;를 누르면 태그를 입력할 수 있다. 자동완성 기능을 제공한다.</p>
+
+<h3>노트 즐겨찾기 이용하기</h3>
+
+<p>nvALT에서는 즐겨찾기(bookmark) 기능이 있다. &quot;책갈피&quot;라는 말이 더 어울리겠다. 원하는 노트를 즐겨찾기에 추가해두면 단축키(⌘+숫자)가 저절로 지정된다. 나중에 다른 노트를 다루다가 해당 단축키를 누르면 지정된 노트로 바로 이동할 수 있다.</p>
+
+<p>nvALT 즐겨찾기 단축키는 다음과 같다.</p>
+
+<ul>
+<li>노트를 즐겨찾기에 추가: ⌘⇧D</li>
+<li>등록된 즐겨찾기 목록 보기: ⌘0</li>
+</ul>
+
+<h3>노트 미리보기</h3>
+
+<p>메뉴를 눌러서 접근할 수 있지만 나는 키보드 단축키를 이용한다.</p>
+
+<ul>
+<li>미리보기 창 토글: ⌘^P</li>
+<li>소스 보기 토글: ⌘U</li>
+<li>미리보기 창에 노트 고정: ⌥⇧⌘L</li>
+<li>미리보기/PDF 프린트: ⌥⇧⌘P</li>
+<li>미리보기 HTML 저장: ⇧⌘S</li>
+</ul>
+
+<h2>노트 작성 팁</h2>
+
+<h3>북마클릿을 이용해서 노트 작성</h3>
+
+<p>사파리, 크롬, 파이어폭스 모든 웹브라우저에서 사용할 수 있다. 북마클릿을 즐겨찾기 막대에 끌어넣으면 바로 사용이 가능하다. 웹서핑을 하다가 노트에 넣고 싶은 페이지를 발견하면 북마클릿을 누른다. 그러면 보고 있는 웹페이지 전부가 nvALT에 새로운 노트로 저장된다. 물론 nvALT는 노트 앱이기에 이미지는 저장되지 않고 기본으로 Instapaper 모빌라이저를 사용해서 긁어 온다. 북마클릿을 수정하여 Instapaper 모빌라이저를 적용하지 않고 가져오도록 설정도 가능하다.</p>
+
+<p>북마클릿은 <a href="http://jots.mypopescu.com/post/8529405944/nvalt-bookmarklet">nvALT Bookmarklet :: think differently big</a> 에서 내려받을 수 있다.</p>
+
+<h3>웹브라우저 익스텐션을 사용해서 노트 작성</h3>
+
+<p>사파리와 크롬에서 사용할 수 있다. 선택한 링크, 텍스트나 페이지 전부를 nvALT로 옮긴다. Instapater Mobilizer 사용 여부도 선택할 수 있다.</p>
+
+<h3>Keyboard Maestro Macro를 이용해서 빠른 노트 작성</h3>
+
+<p><a href="http://forum.keyboardmaestro.com/t/sample-script-take-quick-note-with-nvalt/535/8" title="Sample Script: Take Quick Note with NVAlt - Keyboard Maestro Discourse">Keyboard Maestro 포럼의 글</a> 중 가장 마지막에 공유된 nvALT {Create New Note} 매크로가 흥미롭다. nvALT의 URL scheme을 이용해서 빠르게 노트를 작성하는 매크로다.</p>
+
+<p>이 매크로를 실행하면 &quot;2014-10-31-9:31:40 AM&quot;처럼 &quot;년-월-일-시간&quot;이 제목으로 한 노트가 생성된다. &quot;scratchx telephone call&quot;이라는 태그도 자동으로 입력된다. 커서는 노트의 내용을 입력하는 영역에 위치하니 바로 원하는 글을 적으면 된다. 생성되는 제목의 형식이나 태그는 매크로를 받고 각자 필요에 따라 수정하면 된다. 사용해보니 매우 빠르게 메모하기 좋다. Keyboard Maestro와 nvALT를 모두 사용하는 사람이라면 한 번 받아보길 권한다.</p>
+
+<h2>맺음말</h2>
+
+<p>내가 맥을 사용할 때 nvALT는 거의 항상 켜져 있다. 그만큼 nvALT는 내 Maclife에 깊이 들어와 있는 앱이고 처음 접했을 때부터 지금까지 나를 실망시키지 않은 고마운 앱이다. 이 글을 읽는 당신에게도 좋은 친구가 되어줄 것이라 믿는다.</p>
+
+  </div>
+
+  <div class="date">
+    <br>  
+    이 글은 2014-11-02에 작성되었습니다.
+  </div>
+
+</article>
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+                    
+          <a href="mailto:charmjf@gmail.com"><svg width="40px" height="40px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <path d="M0.224580688,30 C0.224580688,13.4314567 13.454941,0 29.7754193,0 C46.0958976,0 59.3262579,13.4314567 59.3262579,30 C59.3262579,46.5685433 46.0958976,60 29.7754193,60 C13.454941,60 0.224580688,46.5685433 0.224580688,30 Z M0.224580688,30" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+    <path d="M35.0384324,31.6384006 L47.2131148,40.5764264 L47.2131148,20 L35.0384324,31.6384006 Z M13.7704918,20 L13.7704918,40.5764264 L25.9449129,31.6371491 L13.7704918,20 Z M30.4918033,35.9844891 L27.5851037,33.2065217 L13.7704918,42 L47.2131148,42 L33.3981762,33.2065217 L30.4918033,35.9844891 Z M46.2098361,20 L14.7737705,20 L30.4918033,32.4549304 L46.2098361,20 Z M46.2098361,20" id="Shape" fill="#333333" sketch:type="MSShapeGroup"></path>
+    <path d="M59.3262579,30 C59.3262579,46.5685433 46.0958976,60 29.7754193,60 C23.7225405,60 18.0947051,58.1525134 13.4093244,54.9827754 L47.2695458,5.81941103 C54.5814438,11.2806503 59.3262579,20.0777973 59.3262579,30 Z M59.3262579,30" id="reflec" fill-opacity="0.08" fill="#000000" sketch:type="MSShapeGroup"></path>
+</svg></a>
+          
+          
+          
+          
+          
+          
+          
+          <a href="http://twitter.com/charmjf"><svg width="40px" height="40px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <path d="M0,30 C0,13.4314567 13.4508663,0 30.0433526,0 C46.6358389,0 60.0867052,13.4314567 60.0867052,30 C60.0867052,46.5685433 46.6358389,60 30.0433526,60 C13.4508663,60 0,46.5685433 0,30 Z M0,30" fill="#4099FF" sketch:type="MSShapeGroup"></path>
+    <path d="M29.2997675,23.8879776 L29.3627206,24.9260453 L28.3135016,24.798935 C24.4943445,24.3116787 21.1578281,22.6592444 18.3249368,19.8840023 L16.9399677,18.5069737 L16.5832333,19.5238563 C15.8277956,21.7906572 16.3104363,24.1845684 17.8842648,25.7946325 C18.72364,26.6844048 18.5347806,26.8115152 17.0868584,26.2818888 C16.5832333,26.1124083 16.1425613,25.985298 16.1005925,26.0488532 C15.9537019,26.1971486 16.457327,28.1249885 16.8560302,28.8876505 C17.4016241,29.9469033 18.5137962,30.9849709 19.7308902,31.5993375 L20.7591248,32.0865938 L19.5420308,32.1077788 C18.3669055,32.1077788 18.3249368,32.1289639 18.4508431,32.57385 C18.8705307,33.9508786 20.5282967,35.4126474 22.3749221,36.048199 L23.6759536,36.4930852 L22.5427971,37.1710069 C20.8640467,38.1455194 18.891515,38.6963309 16.9189833,38.738701 C15.9746862,38.759886 15.1982642,38.8446262 15.1982642,38.9081814 C15.1982642,39.1200319 17.7583585,40.306395 19.2482495,40.7724662 C23.7179224,42.1494948 29.0269705,41.5563132 33.0140027,39.2047722 C35.846894,37.5311528 38.6797853,34.2050993 40.0018012,30.9849709 C40.7152701,29.2689815 41.428739,26.1335934 41.428739,24.6294545 C41.428739,23.654942 41.4916922,23.5278317 42.6668174,22.3626537 C43.359302,21.6847319 44.0098178,20.943255 44.135724,20.7314044 C44.3455678,20.3288884 44.3245835,20.3288884 43.2543801,20.6890343 C41.4707078,21.324586 41.2188952,21.2398458 42.1002392,20.2865183 C42.750755,19.6085965 43.527177,18.3798634 43.527177,18.0197174 C43.527177,17.9561623 43.2124113,18.0620876 42.8556769,18.252753 C42.477958,18.4646036 41.6385828,18.7823794 41.0090514,18.9730449 L39.8758949,19.3331908 L38.8476603,18.634084 C38.281082,18.252753 37.4836756,17.829052 37.063988,17.7019416 C35.9937846,17.4053509 34.357003,17.447721 33.3917215,17.7866818 C30.768674,18.7400093 29.110908,21.1974757 29.2997675,23.8879776 Z M29.2997675,23.8879776" id="Path" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+    <path d="M60.0867052,30 C60.0867052,46.5685433 46.6358389,60 30.0433526,60 C23.8895925,60 18.1679598,58.1525134 13.4044895,54.9827754 L47.8290478,5.81941103 C55.2628108,11.2806503 60.0867052,20.0777973 60.0867052,30 Z M60.0867052,30" id="reflec" fill-opacity="0.08" fill="#000000" sketch:type="MSShapeGroup"></path>
+</svg></a>
+          
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>
