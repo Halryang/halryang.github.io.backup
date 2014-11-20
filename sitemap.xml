@@ -11,11 +11,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://halryang.github.io/breastfeeding-hospital/</loc>
-    <lastmod>2014-11-17T23:32:35+09:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>http://halryang.github.io/From-Wordpress-To-Jekyll/</loc>
     <lastmod>2014-11-16T08:07:11+09:00</lastmod>
     <priority>0.8</priority>
@@ -62,25 +57,25 @@
   </url>
   <url>
     <loc>http://halryang.github.io/404.html</loc>
-    <lastmod>2014-11-19T16:26:44+09:00</lastmod>
+    <lastmod>2014-11-20T16:40:46+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://halryang.github.io/about/</loc>
-    <lastmod>2014-11-19T16:26:44+09:00</lastmod>
+    <lastmod>2014-11-20T16:40:46+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://halryang.github.io/</loc>
-    <lastmod>2014-11-19T16:26:44+09:00</lastmod>
+    <lastmod>2014-11-20T16:40:46+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://halryang.github.io/original</loc>
-    <lastmod>2014-11-19T16:26:44+09:00</lastmod>
+    <lastmod>2014-11-20T16:40:46+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
