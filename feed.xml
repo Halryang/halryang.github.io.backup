@@ -7,6 +7,17 @@
     <atom:link href="http://halryang.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Os X Modifier Key Setting</title>
+        <description>&lt;p&gt;Caps Lock키를 잘 사용하지 않는 경우 이 위치에 Control 키를 매핑하면 더 편하게 쓸 수 있다. 한번 바꿔서 사용해 본 사람은 종종 키매핑을 바꿔서 사용하는데, Mac의 OS X에서는 이 Modifier key를 기본 키보드 설정에서 바꿀 수 있다. 화면 좌상단의 를 눌러 system preferences → keyboard 설정화면에 들어가서 아래 그림에 표시한 부분을 누르면 기본 Modifier key들을 개인의 입맛에 맞게 바꿀 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://farm9.staticflickr.com/8571/15844382335_5d852cfeba_b.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 21 Nov 2014 00:00:00 +0900</pubDate>
+        <link>http://halryang.github.io/OS-X-Modifier-key-setting/</link>
+        <guid isPermaLink="true">http://halryang.github.io/OS-X-Modifier-key-setting/</guid>
+      </item>
+    
+      <item>
         <title>Jekyll에서 Youtube 영상을 Responsive하게 임베딩하기</title>
         <description>&lt;p&gt;Jekyll은 정적인 사이트를 만드는 툴로서, 지금까지 제가 본 바론 글을 쓰기에 최적화 되어 있습니다. Code highlight도 있어 개발자가 쓰기에 딱 좋아보입니다. 하지만 저는 개발은 전혀 모르고 개인 블로그를 가볍게 운영하려고 Jekyll을 사용하고 있습니다. 가끔 Youtube에서 좋은 영상을 발견하면 블로그에 올려두기도 하는데, Jekyll에선 Liquid Tag를 이용해서 Youtube 영상을 공유할 수 있습니다.&lt;/p&gt;
 
@@ -509,122 +520,6 @@
         <pubDate>Mon, 20 Oct 2014 23:35:35 +0900</pubDate>
         <link>http://halryang.github.io/getsharableurl/</link>
         <guid isPermaLink="true">http://halryang.github.io/getsharableurl/</guid>
-      </item>
-    
-      <item>
-        <title>GitHub pages를 이용하여 Jekyll Blog를 만들자</title>
-        <description>&lt;h1&gt;Intro&lt;/h1&gt;
-
-&lt;p&gt;GitHub pages를 이용하여 Jekyll Blog를 만들어 봤다. 기본적인 지식도 제대로 갖추지 못한 내가 CLI를 MS-DOS시절 이후 오랜만에 조금씩 써가면서 만드는데 도움이 된 글들을 먼저 링크하고 싶다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://nolboo.github.io/blog/2013/10/15/free-blog-with-github-jekyll/&quot;&gt;지킬로 깃허브에 무료 블로그 만들기 - @n0lb00&amp;#39;s Blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://pixelcog.com/blog/2013/jekyll-from-scratch-introduction/&quot;&gt;Jekyll From Scratch - Getting Started&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/using-jekyll-with-pages/&quot;&gt;&lt;strong&gt;Using Jekyll with Pages&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;가장 도움이 된 글은 역시 굵게 표시한 마지막 링크 글이다. GitHub help 페이지에서 Jekyll을 Pages와 어떻게 함께 사용할 수 있는지 잘 설명했다.&lt;/p&gt;
-
-&lt;h2&gt;준비단계&lt;/h2&gt;
-
-&lt;p&gt;블로그를 만들기 전 나의 환경은 다음과 같았다.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Macbook Air 2012 13inch&lt;/li&gt;
-&lt;li&gt;GitHub 미가입: 이전에 가입한 줄 알았는데 아니었다.&lt;/li&gt;
-&lt;li&gt;X-code 미설치&lt;/li&gt;
-&lt;li&gt;프로그래밍에 대한 배경 지식 없음&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Jekyll을 설치하기 위한 요구사항&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Ruby (Development headers를 포함)&lt;/li&gt;
-&lt;li&gt;RubyGems&lt;/li&gt;
-&lt;li&gt;Linus, Unix, or Mac OS X&lt;/li&gt;
-&lt;li&gt;NodeJS, or another JavaScript runtime (for CoffeeScript support)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;사실 나는 이 항목들 각각이 무엇을 의미하는지도 모른다. 그러나 용감히 시도해보기로 했다.&lt;/p&gt;
-
-&lt;h3&gt;Xcode, Command-Line Tools 설치&lt;/h3&gt;
-
-&lt;p&gt;Mac OS X에서 Jekyll을 설치하기 위해 가장 먼저 해야 하는 것은 Xcode와 Command-Line Tools를 설치하는 일이었다. Xcode는 App store에서 검색해서 쉽게 설치할 수 있었으나 &amp;#39;Preferences → Downloads → Components&amp;#39;에 들어가도 Command-Line Tools를 다운로드 하는 것이 보이지 않았다. 결국 따로 구글링해서 &lt;a href=&quot;http://railsapps.github.io/xcode-command-line-tools.html&quot;&gt;Xcode Command Line Tools for Mac OS X 10.10 Yosemite · RailsApps&lt;/a&gt; 페이지를 보고 CLI 명령어를 입력하여 설치할 수 있었다.&lt;/p&gt;
-
-&lt;h2&gt;Jekyll을 설치하자&lt;/h2&gt;
-
-&lt;p&gt;Xcode와 Command-Line Tools를 설치하고 나니 이제 gem install jekyll이 정상 작동했다! 야호!!! 작동이 되고 나면 상당히 빠른 시간 안에 Jekyll 설치가 끝난다. 약간 허무하다. 이제 로컬 디렉토리(내 맥북 안 어딘가)에 지킬을 설치하고 온라인 GitHub에 블로그를 올릴 수 있게 설정하면 된다.&lt;/p&gt;
-
-&lt;h3&gt;로컬 디렉토리 Jekyll 설치&lt;/h3&gt;
-
-&lt;p&gt;이 문서 저 문서 보면서 하다보니 여기저기에서 약간씩 섞였다. 나는 로컬 디렉토리 이름은 blog로 로컬 디렉토리에 설치했다.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;jekyll new blog
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;이렇게 입력하면 된다. 엄청 간단하다. 이렇게 blog라는 디렉토리에 Jekyll을 설치했다. Jekyll 설치가 잘 되었는지 확인한다.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cd blog
-jekyll serve -w
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;위의 명령어를 입력하고 Localhost:4000 이라고 사파리 주소창에 입력하면 로컬에 설치된 Jekyll이 어떻게 보이는지 확인할 수 있다.&lt;/p&gt;
-
-&lt;h3&gt;GitHub에 Repository 만들기&lt;/h3&gt;
-
-&lt;p&gt;GitHub를 이용하면 무료로 Jekyll 블로그를 만들 수 있다는 글을 보고 만들기 시작한 것이므로 당연히 GitHub pages를 이용하기 위해 GitHub 계정을 만들었다. Repository는 내가 만든 파일들과 폴더들을 올려놓을 수 있는 공간인 듯하다. Repository를 흔히 Repo라고 줄여 말하는 것 같아 나도 경제적으로 아래에는 Repo라고 적겠다.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;GitHub에 가입을 한다.&lt;/li&gt;
-&lt;li&gt;E-mail verification을 한다. (권고하는 사항이므로 바로 했다)&lt;/li&gt;
-&lt;li&gt;Repo 만들기를 누른다. (무료로 공개 Repo는 여러 개 생성 가능)&lt;/li&gt;
-&lt;li&gt;나는 Repo 이름을 halryang.github.io 라고 정했다.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3&gt;로컬 디렉토리를 GitHub repo에 올리기&lt;/h3&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ git init
-$ git add -A &amp;amp;&amp;amp; git commit -m &amp;quot;initial commit&amp;quot;
-$ git remote add origin GitHubRepo주소
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;나는 이 과정이 가장 힘들었다. 처음엔 GitHub Repo 주소를 넣는 곳에 &amp;quot;.git&amp;quot;을 입력하지 않아서 push가 되지 않는 것을 왜 안 되지 하고 살펴보고 있었다. CLI는 오타를 용납하지 않으니 명령어를 넣을 때 잘 살펴서 입력해야 한다. 이런 문제를 수정하고서도 Jekyll을 설치한 로컬 디렉토리에서 Repo에 몇 번을 push해도 halryang.github.io에 들어가면 아무런 페이지가 뜨지 않았다.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://help.github.com/articles/using-jekyll-with-pages/&quot;&gt;Using Jekyll with Pages&lt;/a&gt;를 참고하여 Bundler를 설치하고 Gemfile을 만들어서 로컬 디렉토리에 넣은 후 bundle install을 하니 그제서야 halryang.github.io 에서 Jekyll을 확인할 수 있었다.&lt;/p&gt;
-
-&lt;p&gt;gem install github-pages 를 통해서도 Jekyll을 설치할 수 있으나 문제가 발생할 수 있다고 적혀 있다(If you decided to skip step #2, you can still install Jekyll with the command gem install github-pages, but you may run into trouble down the line).&lt;/p&gt;
-
-&lt;p&gt;gemfile과 Gemfile.lock이 생성되어 새로 push하는 방법을 몰라서 git add 명령어를 배우게 되었다. 겨우 Push만 했을 뿐 아직 익히진 못했다.&lt;/p&gt;
-
-&lt;h2&gt;이제 블로그를 커스터마이징하자&lt;/h2&gt;
-
-&lt;h3&gt;Jekyll을 configure하는 방법&lt;/h3&gt;
-
-&lt;p&gt;거창하게 커스터마이징이라고 적었지만 내가 지금까지 한 것은 겨우 블로그 이름(title), 간략한 설명(description), email 주소, 트위터 사용자명, GitHub 사용자명, markdown 세팅을 바꾼 것 뿐이다. 이 모든 설정은 _config.yml 파일에 들어 있으니 로컬 디렉토리에서 이것을 수정하여 저장하고 git add, git push하면 된다.&lt;/p&gt;
-
-&lt;h3&gt;테마 적용, 스타일 변경&lt;/h3&gt;
-
-&lt;p&gt;Jekyll 또한 많은 테마가 이미 나와있고 테마를 적용하고 나서도 개인 취향에 따라 css 변경 등을 통해 입맛에 맞는 사이트를 만들 수 있다. 나는 이제 시작하는 입장이므로 지금은 테마 적용, 스타일 변경, 플러그인 추가를 하지 않았다. 후에 테마를 적용하면 그것을 주제로 또 포스팅을 할 예정이다.&lt;/p&gt;
-
-&lt;h2&gt;이제 글을 써보자&lt;/h2&gt;
-
-&lt;p&gt;지금까지 Jekyll을 GitHub에 올리고 halryang.github.io 라는 주소를 통해서 들어가려고 많은 과정을 거쳤다. 이제 드디어 블로그에 글을 올릴 수 있다. 기본적인 개념은 내가 원하는 글을 마크다운으로 작성해서 로컬 디렉토리에 _post 폴더에 넣은 후 push 하면 GitHub에 파일이 올라가고 그 파일을 Jekyll이 보기 좋게 뿌려주는 것이다.&lt;/p&gt;
-
-&lt;h3&gt;블로그 포스팅의 원칙&lt;/h3&gt;
-
-&lt;p&gt;WISWIG(What I See What I Get) 방식으로 글을 발행하는 여타 많은 블로그와 달리 Jekyll은 각 블로그 글마다 파일이 따로 있다. Jekyll이 각각의 파일을 보여주는 것이다. 따라서 글을 발행하려면 글을 파일로 로컬 디렉토리에 저장해야 한다. 이때 블로그 포스트는 반드시 _post 안에 넣어야 한다. Jekyll은 이 폴더에 있는 파일만 블로그 포스트로 인식한다. 그리고 블로그 포스트 파일명은 항상 &lt;em&gt;YYYY-MM-DD-post-name.확장자&lt;/em&gt;(나는 마크다운으로 작성하고 보통 &lt;strong&gt;md&lt;/strong&gt;확장자를 사용한다) 형식으로 지정되어야 한다.&lt;/p&gt;
-
-&lt;p&gt;블로그 포스트는 항상 파일의 제일 앞에 front matter를 적어야 한다. Jekyll은 front matter 블록으로 시작되는 파일만 처리한다. 각 블로그 포스트의 front matter에는 &amp;quot;title&amp;quot;과 &amp;quot;layout&amp;quot; 필드는 반드시 들어가야 한다. date는 파일 이름에 들어가니 필수는 아니다.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;---
-title: 여기에 글 제목을 입력한다
-layout: post
----
-
-이제 여기에 글 내용을 입력한다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;위와 같이 입력하면 된다. 이렇게 글을 입력하고 파일을 _post에 저장하고 add, push 했으면 Jekyll 블로그에서 글이 어떻게 보이는지 확인하는 일만 남았다.&lt;/p&gt;
-
-&lt;h2&gt;이제 시작이다&lt;/h2&gt;
-
-&lt;p&gt;지금까지 Jekyll과 GitHub pages를 이용해서 정말 아무 것도 모르는 초보가 무료로 블로그를 하나 만들어 보는 과정을 정리했다. 혹시나 이 글이 다른 사람에게도 도움이 되면 정말 좋겠다.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 17 Oct 2014 00:00:00 +0900</pubDate>
-        <link>http://halryang.github.io/Start-Blogging-With-Jekyll/</link>
-        <guid isPermaLink="true">http://halryang.github.io/Start-Blogging-With-Jekyll/</guid>
       </item>
     
   </channel>
