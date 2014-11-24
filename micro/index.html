@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
-    <title>한량의 Jekyll 블로그</title>
+    <title>잡담 :: 한량의 Jekyll 블로그</title>
 
     <meta name="author" content="한량의 Jekyll 블로그" />
     <meta name="description" content="안녕하세요. CLI를 모르는 한량이 만든 Jekyll 블로그에 오셨습니다.">
@@ -41,91 +41,45 @@
     </div>
 
     <div id="main" role="main" class="container">
-      <!-- This loops through the paginated posts -->
-<div class="posts">
+      <article class="page">
   
-    <article class="post">    
-      
-      <h1><a href="/automation-for-jekyll-posting/">지킬 포스팅의 자동화</a></h1>
+  <h1>잡담</h1>
 
-      <div class="entry">
-        <p>워드프레스에서 지킬로 갈아타면서 워드프레스보다 편하게 글을 내보내는 방법이 부족한 상태입니다. 워드프레스를 쓸때도 그랬지만 플러그인을 최소로 사용해서 가능한 가벼운 상태로 지킬을 유지하려고 생각중입니다.</p> <h2>YAML 머리말</h2> <p>지킬에서 블로그에 올릴 포스트에는 YAML 머리말이 필요합니다. 저는 지금 지킬에서 태그까지 사용하기 때문에 YAML 머리말에 layout,...
-      </div>
-      
-      <a href="/automation-for-jekyll-posting/" class="read-more">Read More</a>
-    </article>
-  
-    <article class="post">    
-      
-      <h1><a href="/tag-and-archive/">지킬에 태그시스템과 아카이브 페이지 추가</a></h1>
+  <div class="entry">
+    <p>아이폰에서 작성하는 경우 Byword 혹은 Editorial 모두 좋은 선택으로 보인다. 나는 가상키보드 확장열을 생각하면 Editorial이 좀더 낫다고 생각한다.<br><br>
+<em>at 2014-11-25</em></p>
 
-      <div class="entry">
-        <h2>태그 추가</h2> <p>지킬에서 블로그를 운영하기로 하고 태그와 아카이브 페이지를 만든다는 것이 좀 늘어졌습니다. 관련 정보는 찾아 놓아서 적용하기만 하면 되겠다고 생각했지만 <a href="http://jekyllrb-ko.github.io/docs/plugins/">지킬 공식 문서</a>에 포함된 플러그인으로 태그를 만드는 데는 모두 실패했습니다. 프로그래밍을 전혀 모르는 제가 그냥 보고 따라하기엔 어려웠습니다....
-      </div>
-      
-      <a href="/tag-and-archive/" class="read-more">Read More</a>
-    </article>
-  
-    <article class="post">    
-      
-      <h1><a href="/OS-X-modikey-setting/">OS X 기본 설정을 이용해서 Caps Lock 키와 Control 키매핑을 바꾸기</a></h1>
+<hr>
 
-      <div class="entry">
-        <p>Caps Lock키를 잘 사용하지 않는 경우 이 위치에 Control 키를 매핑하면 더 편하게 쓸 수 있다. 한번 바꿔서 사용해 본 사람은 종종 키매핑을 바꿔서 사용하는데, Mac의 OS X에서는 이 Modifier key를 기본 키보드 설정에서 바꿀 수 있다. 화면 좌상단의 를...
-      </div>
-      
-      <a href="/OS-X-modikey-setting/" class="read-more">Read More</a>
-    </article>
-  
-    <article class="post">    
-      
-      <h1><a href="/embed-youtube-responsively/">Jekyll에서 Youtube 영상을 Responsive하게 임베딩하기</a></h1>
+<p>iOS에서 글 올리는 것 테스트<br>
+아이폰에서 올리는 것은 지킬 로컬 빌드 &amp; 커밋 푸시가 안 되어서 반쪽짜리.<br>
+일단 글을 작성해두고 나중에 맥에서 빌드해서 올려야 함. 아예 로컬 빌드를 포기한다면 아이폰에서도 쓸만할 것으로 보인다.<br><br>
+<em>at 2014-11-25</em></p>
 
-      <div class="entry">
-        <p>Jekyll은 정적인 사이트를 만드는 툴로서, 지금까지 제가 본 바론 글을 쓰기에 최적화 되어 있습니다. Code highlight도 있어 개발자가 쓰기에 딱 좋아보입니다. 하지만 저는 개발은 전혀 모르고 개인 블로그를 가볍게 운영하려고 Jekyll을 사용하고 있습니다. 가끔 Youtube에서 좋은 영상을 발견하면 블로그에 올려두기도...
-      </div>
-      
-      <a href="/embed-youtube-responsively/" class="read-more">Read More</a>
-    </article>
-  
-    <article class="post">    
-      
-      <h1><a href="/delete-timemachine-backup/">Delete TimeMachine Backup</a></h1>
+<hr>
 
-      <div class="entry">
-        <ol> <li>OS X에서 휴지통이 비워지지 않을 때, terminal에 <code>sudo rm -rf</code> 라고 적고, 터미널로 지워지지 않는 폴더를 드래그 앤 엔터.</li> <li>외장하드 타임머신 백업은 위의 방법으로 안된다. 터미널에서 백업에 사용했던 volume으로 <code>cd /Volumes/Volume이름</code> 들어가서 <code>sudo rm -rf .Trashes</code> 엔터. 이때 progress...
-      </div>
-      
-      <a href="/delete-timemachine-backup/" class="read-more">Read More</a>
-    </article>
-  
-</div>
+<ol>
+<li>지킬 루트 폴더에 micro.md 생성</li>
+<li>LaunchBar를 이용해서 micro.md에 abbreviation 적용(나는 <em>mj</em>로)</li>
+<li>Keyboard Maestro Macro로 YAML 머리말 다음에 글을 입력할 수 있도록 setting</li>
+<li>iOS에서도 접근 가능하도록 micro.md를 Dropbox public note folder에 symbolic link</li>
+<li>TextExpander touch에 날짜 스탬프를 약어로 입력
 
-<!-- Pagination links -->
+<ul>
+<li>dateqq 입력하면 개행 + 날짜 입력까지<br></li>
+</ul></li>
+</ol>
 
-<div class="pagination">
-  
-    <span>&laquo; Prev</span>
-  
+<p>일단 여기까지 완성!!<br><br>
+<em>at 2014-11-24</em></p>
 
-  
-    
-      <em>1</em>
-    
-  
-    
-      <a href="/page2">2</a>
-    
-  
-    
-      <a href="/page3">3</a>
-    
-  
+<hr>
 
-  
-    <a href="/page2">Next &raquo;</a>
-  
-</div>
+<p>이 페이지는 지킬의 한 페이지를 md 파일로 만들고 계속해서 prepend 하는 방식으로 Microblogging 처럼 쓸 수 있지 않을까 하는 생각에서 만든 페이지입니다.<br><br>
+<em>at 2014-11-24</em></p>
+
+  </div>
+</article>
 
     </div>
 
